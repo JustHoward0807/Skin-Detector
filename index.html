@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input[type="range"] {
+        -webkit-appearance: none;
+        /* Override default CSS styles */
+        width: 200px;
+        height: 15px;
+        outline: none;
+        /* Remove outline */
+    }
+    input[type="text"] {
+        width: 35px;
+        height: 10px;
+    }
+    #r1 {
+        background: linear-gradient(to right, hsl(0, 50%, 0%), hsl(0, 50%, 100%));
+        margin: 0 auto;
+    }
+    #btxt {
+        margin: 0 auto;
+    }
+    table {
+        margin: 0 auto;
+    }
+    td {
+        text-align: center;
+    }
+    #findSkin, #skinWhite, #file {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <input id="file" type="file">
+    <button type="button" id="findSkin" onclick="skinChangeRGB()">Skin Detector</button>
+    <button type="button" id="skinWhite" onclick="whiteBtn()">Brightness</button>
+    <hr>
+    <input type="range" id="r1" value="0" min="-20" max="50" onChange="rangepro()" style="display:none;">
+    <input type="text" id="btxt" value="0" onChange="textpro()" style="display:none;">
+    <table>
+        <tr>
+            <td><img id="i1"></td>
+            <td><canvas id="c1" style="display:none;"></canvas></td>
+            <td><img id="a1"><canvas id="b1" style="display:none;"></canvas></td>
+        </tr>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
